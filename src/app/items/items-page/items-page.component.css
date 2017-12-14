@@ -1,0 +1,16 @@
+.list-control-buttons {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.list {
+    margin:0;
+    padding:0;
+}
+
+.list-item {
+    padding:15px 0;
+}
+.item-buttons {
+    text-align: right;
+}

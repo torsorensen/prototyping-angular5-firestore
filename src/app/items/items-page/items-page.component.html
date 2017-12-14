@@ -1,0 +1,30 @@
+<div>
+
+    <h1>Items</h1>
+
+    <div class="list-control-buttons">
+        <button class="items-add" (click)="doAddItem()">
+            Add new item
+        </button>
+        
+    </div>
+
+    <ul class="list">
+        
+        <li class="list-item row" *ngFor="let item of items$ | async">
+            <div class="item-text col-8">{{ item | json }}</div>
+            <div class="item-buttons col-4">
+                
+                <button class="item-delete" (click)="doDeleteItem(item)">
+                    Delete
+                </button>
+                <button class="item-details" (click)="doGotoItem(item)">
+                    Details
+                </button>
+            </div>   
+        </li>
+    
+    </ul>
+
+</div>
+    

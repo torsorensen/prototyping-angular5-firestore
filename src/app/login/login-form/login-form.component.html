@@ -1,0 +1,27 @@
+<ng-container >
+        
+    <form [formGroup]="signInForm" (ngSubmit)="signIn()">
+        
+        <h3>Existing user</h3>
+    
+        <div>Email</div>
+        <div><input type="email" formControlName="email"></div>
+        <div>Password</div>
+        <div><input type="password" formControlName="password" required></div>
+
+        <button type="submit" [disabled]="!signInForm.valid">Log in</button>
+
+        <div>
+            <div *ngIf="email.invalid && email.dirty">
+                    Your email doesn't look quite right...
+            </div>
+            <div *ngIf="password.invalid && password.touched">
+                Password must be between 6 and 24 chars and have at least one number 
+            </div>
+    
+            <div *ngIf="signInForm.valid" >Form looks good! Let's do this.</div>
+        </div>
+    
+    </form>
+    
+</ng-container>

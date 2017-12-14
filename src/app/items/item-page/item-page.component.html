@@ -1,0 +1,19 @@
+<div>
+    <ng-container *ngIf="item$ | async as item">
+        <h1>Item with id {{ item.id }} </h1>
+
+        <div class="list-control-buttons">
+            <button class="item-delete" (click)="doDeleteItem(item)">
+                Delete
+            </button>
+        </div>
+        
+        <div>
+            {{ item | json }}
+        </div> 
+
+    </ng-container>   
+</div>
+    
+
+            
